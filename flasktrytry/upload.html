@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload loading demand information</title>
+</head>
+<body>
+    <h1>Upload Files</h1>
+    <form action="http://127.0.0.1:5000/upload" method="post" enctype="multipart/form-data">
+        <label for="case_name">Enter case name (e.g. 测试1):</label>
+        <input type="text" id="case_name" name="case_name"><br>
+
+        <label for="file1">Upload containers info xlsx:</label>
+        <input type="file" name="file1"><br>
+
+        <label for="file2">Upload boxes info xlsx:</label>
+        <input type="file" name="file2"><br>
+
+        <input type="submit" value="Upload Files">
+    </form>
+</body>
+</html>

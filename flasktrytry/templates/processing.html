@@ -1,0 +1,25 @@
+<!-- processing.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Processing</title>
+    <script>
+        // 每隔一段时间检查任务状态
+        setInterval(function() {
+            fetch('/check_task_status')  // 发送请求检查任务状态
+                .then(response => response.json())
+                .then(data => {
+                    if (data.task_completed) {  // 如果任务已完成
+                        window.location.href = '/show_data';  // 跳转到结果页面
+                    }
+                });
+        }, 2000);  // 每隔5秒检查一次
+    </script>
+</head>
+<body>
+    <h1>Processing...</h1>
+    <p>Please wait while the task is being processed.</p>
+</body>
+</html>
